@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: poppins, sans-serif;
+  padding: 0;
+}
+
+.services-card {
+  padding: 40px;
+  margin: 20px 0;
+  flex-direction: column;
+  border-radius: 6px;
+  width: 360px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+}
+
+p {
+  margin: 10px 20px 0 0;
+  font-size: 0.9rem;
+  color: hsl(212, 6%, 44%);
+  line-height: 1.5;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  margin: 20px 0 0 220px;
+}
+
+.supervisor {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
