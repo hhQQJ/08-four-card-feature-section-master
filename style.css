@@ -39,9 +39,10 @@ body {
 
 .services-card {
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 35px;
-  margin: 20px 0;
-  flex-direction: column;
+  margin: 20px;
   border-radius: 6px;
   width: 340px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -92,9 +93,27 @@ img {
 @media (min-width: 768px) {
   .services {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
-    width: 60%;
-    align-items: center;
+
+    /* 定义 3 列 2 行的网格 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    align-items: center; /* 垂直居中关键 */
+  }
+  .supervisor {
+    grid-column: 1;
+    grid-row: 1 / span 2; /* 跨越两行，实现垂直居中 */
+  }
+  .team-builder {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .karma {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .calculator {
+    grid-column: 3;
+    grid-row: 1 / span 2;
   }
 }
